@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://wsdoxmhdkcp4"]
+
+[ext_resource type="Texture2D" uid="uid://be75huce6t73e" path="res://HorrorGameAssetPack/MainAssets/platform1.png" id="1_f3sb7"]
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+[node name="Platform1" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(604, 664)
+texture = ExtResource("1_f3sb7")
