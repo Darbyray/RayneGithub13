@@ -1,13 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://wsdoxmhdkcp4"]
+[gd_scene load_steps=4 format=3 uid="uid://wsdoxmhdkcp4"]
 
 [ext_resource type="Texture2D" uid="uid://be75huce6t73e" path="res://HorrorGameAssetPack/MainAssets/platform1.png" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://d1pi2t5varcyx" path="res://Player/Ultimate-Platformer-Controller-2D-7d373d80eddabdd85576d4b4deac9ecb473dc63e/Ultimate-Platformer-Controller-2D-7d373d80eddabdd85576d4b4deac9ecb473dc63e/UltimatePlatformerController.gd" id="1_fj7yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3sb7"]
+size = Vector2(213.5, 27.5)
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_fj7yv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-223.75, 58.75)
+shape = SubResource("RectangleShape2D_f3sb7")
 
-[node name="Platform1" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(604, 664)
+[node name="Platform1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-222, 58)
 texture = ExtResource("1_f3sb7")
