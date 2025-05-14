@@ -1,14 +1,8 @@
-[gd_scene load_steps=56 format=4 uid="uid://da5f3t4qp7edg"]
+[gd_scene load_steps=45 format=4 uid="uid://da5f3t4qp7edg"]
 
 [ext_resource type="PackedScene" uid="uid://csq34u11eo2ss" path="res://Demo/Resources/Tileset/Sidescroller2D.tscn" id="1_7kvl1"]
 [ext_resource type="Script" uid="uid://cgg0wreqbluen" path="res://PlayerController/PlatformerController2D.gd" id="1_hydhc"]
 [ext_resource type="Shader" uid="uid://cde8huub7klqu" path="res://Demo/Resources/ScrollingTexture/ScrollingTexture.gdshader" id="1_mgwra"]
-[ext_resource type="Script" uid="uid://c767jjkr2pxss" path="res://PlayerController/SpecialMovementsPlatformer2D.gd" id="2_aks1j"]
-[ext_resource type="Script" uid="uid://cedeaffotrtt3" path="res://PlayerController/SpecialMovements/Dash.gd" id="3_35cbo"]
-[ext_resource type="Script" uid="uid://bjl434gx48l5c" path="res://PlayerController/SpecialMovements/CrouchAndRoll.gd" id="4_vu0ct"]
-[ext_resource type="Script" uid="uid://ct43ffwyhn8yn" path="res://PlayerController/SpecialMovements/WallJump.gd" id="5_8rkd4"]
-[ext_resource type="Script" uid="uid://d1t521javs82a" path="res://PlayerController/SpecialMovements/GroundPound.gd" id="6_8nymu"]
-[ext_resource type="Script" uid="uid://dss1y310yvcnc" path="res://PlayerController/SpecialMovements/CornerCutting.gd" id="7_gitng"]
 [ext_resource type="Texture2D" uid="uid://bv4kcc210h5cn" path="res://Demo/Resources/PlayerSprites/Ground (34x28).png" id="8_xjgsf"]
 [ext_resource type="Texture2D" uid="uid://bc4svhljoshix" path="res://Demo/Resources/PlayerSprites/Run (34x28).png" id="9_l83l6"]
 [ext_resource type="Texture2D" uid="uid://kw34knvlbb4n" path="res://Demo/Resources/PlayerSprites/Attack (34x28).png" id="10_kohqm"]
@@ -41,51 +35,6 @@ height = 2048
 seamless = true
 color_ramp = SubResource("Gradient_4g31x")
 noise = SubResource("FastNoiseLite_11o7y")
-
-[sub_resource type="Resource" id="Resource_54c8h"]
-script = ExtResource("4_vu0ct")
-crouchSpeedMultiplier = 0.5
-crouchSizeMultiplier = 0.5
-canRoll = true
-rollTime = 0.2
-rollSpeedMultiplier = 1.2
-
-[sub_resource type="Resource" id="Resource_nuypq"]
-script = ExtResource("5_8rkd4")
-inputPauseAfterWallJump = 0.1
-coyoteTime = 0.1
-wallKickAngle = 60.0
-wallSliding = 3.0
-wallLatching = 2
-
-[sub_resource type="Resource" id="Resource_nse7k"]
-script = ExtResource("6_8nymu")
-pause = 0.25
-maxVelocityMultiplier = 10.0
-fallMultiplier = 2.0
-holdDown = false
-upToCancel = true
-freezeHorizontally = true
-
-[sub_resource type="Resource" id="Resource_6l8yr"]
-script = ExtResource("7_gitng")
-correctionAmount = 1.5
-leftRaycast = NodePath("left")
-middleRaycast = NodePath("middle")
-rightRaycast = NodePath("right")
-
-[sub_resource type="Resource" id="Resource_bqjno"]
-script = ExtResource("3_35cbo")
-dashType = 0
-airDash = false
-dashes = 1
-dashCancel = 1
-speedMultiplier = 1.75
-duration = 0.25
-noDirectionDash = true
-allowJump = true
-consecutiveJumps = 1
-consecutiveJumpsTimer = 0.15
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7h7y"]
 atlas = ExtResource("8_xjgsf")
@@ -368,31 +317,6 @@ animations = {
 "slide": "slide",
 "walk": "walk"
 }
-specialMovements = Array[ExtResource("2_aks1j")]([SubResource("Resource_54c8h"), SubResource("Resource_nuypq"), SubResource("Resource_nse7k"), SubResource("Resource_6l8yr"), SubResource("Resource_bqjno")])
-inputleft = "ui_left"
-inputright = "ui_right"
-inputup = "ui_up"
-inputdown = "ui_down"
-inputjump = "Button_1"
-inputrun = "Button_2"
-inputcrouch = "ui_down"
-inputroll = "Button_2"
-inputlatch = "Button_3"
-inputgroundPound = "Button_3"
-inputdash = "Button_2"
-animationCustomFlip = false
-animationidle = "idle"
-animationwalk = "walk"
-animationjump = "jump"
-animationrun = "walk"
-animationfalling = "fall"
-animationcrouch_idle = "crouch"
-animationcrouch_walk = "crouchWalk"
-animationroll = "roll"
-animationslide = "slide"
-animationlatch = "slide"
-animationgroundPound = "crouch"
-animationdash = "dash"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlatformerController2D"]
 texture_repeat = 1
