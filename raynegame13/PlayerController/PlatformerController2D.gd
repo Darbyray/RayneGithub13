@@ -1,7 +1,7 @@
 @tool
 extends CharacterBody2D
 
-class_name PlatformerController2D 
+class_name PlatformerController2D        
 
 ## ALERT Essential child nodes.
 @export_category("Necesary Child Nodes")
