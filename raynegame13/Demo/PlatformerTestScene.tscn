@@ -368,6 +368,9 @@ animations = {
 "slide": "slide",
 "walk": "walk"
 }
+maxSpeed = 200.0
+timeToReachMaxSpeed = 0.2
+timeToReachZeroSpeed = 0.2
 specialMovements = Array[ExtResource("2_aks1j")]([SubResource("Resource_54c8h"), SubResource("Resource_nuypq"), SubResource("Resource_nse7k"), SubResource("Resource_6l8yr"), SubResource("Resource_bqjno")])
 inputleft = "move_left"
 inputright = "move_right"
@@ -429,3 +432,7 @@ position_smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DebugMenuEditor" parent="CanvasLayer" instance=ExtResource("18_we0mk")]
+offset_left = 1188.0
+offset_top = -160.0
+offset_right = 1188.0
+offset_bottom = -160.0

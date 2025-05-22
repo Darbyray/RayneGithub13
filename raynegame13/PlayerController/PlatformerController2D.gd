@@ -22,11 +22,11 @@ class_name PlatformerController2D
 ## Start the player looking left.
 @export var startLookingLeft: bool = false
 ##The max speed your player will move
-@export_range(50, 500) var maxSpeed: float = 200.0
+@export_range(50, 500) var maxSpeed: float = 1.0
 ##How fast your player will reach max speed from rest (in seconds)
-@export_range(0, 4, 0.1) var timeToReachMaxSpeed: float = 0.2
+@export_range(0, 4, 0.1) var timeToReachMaxSpeed: float = 2
 ##How fast your player will reach zero speed from max speed (in seconds)
-@export_range(0, 4, 0.1) var timeToReachZeroSpeed: float = 0.2
+@export_range(0, 4, 0.1) var timeToReachZeroSpeed: float = 2
 ##If true, player will instantly move and switch directions. Overrides the "timeToReach" variables, setting them to 0.
 @export var directionalSnap: bool = false
 ##If higher than 1, running will be enabled. Player must hold a "run" button to accelerate to max speed times runningModifier. Assign [param inputKeys["inputRun"]] in the input settings.
