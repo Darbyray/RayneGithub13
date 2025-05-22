@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://wsdoxmhdkcp4"]
+[gd_scene load_steps=2 format=4 uid="uid://wsdoxmhdkcp4"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="TileSet" uid="uid://ctjshqjy56wdo" path="res://Resrouces/Tilesets.tres" id="1_f3sb7"]
+
+[node name="world" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAEAAMAAgABAAMAAAAFAAMAAgABAAMAAAAEAAQAAgABAAQAAAAFAAQAAgABAAQAAAAGAAMAAgACAAMAAAAGAAQAAgACAAQAAAAFAAIAAgAJAAMAAAAFAAEAAgAJAAIAAAAGAAUAAgABAAMAAAAHAAUAAgACAAMAAAAHAAYAAgACAAQAAAAHAAcAAgACAAQAAAAKAAMAAgAAAAMAAAALAAMAAgABAAMAAAAMAAMAAgACAAMAAAAKAAQAAgAAAAQAAAAJAAcAAgABAAMAAAAKAAcAAgABAAMAAAAKAAUAAgAAAAQAAAAKAAYAAgAAAAQAAAA=")
+tile_set = ExtResource("1_f3sb7")
