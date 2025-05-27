@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ctjshqjy56wdo"]
 
-[ext_resource type="Texture2D" uid="uid://db2uphtflpbhu" path="res://HorrorGameAssetPack/MainAssets/Graveyard_TileSet.png" id="1_flniw"]
+[ext_resource type="Texture2D" uid="uid://db2uphtflpbhu" path="res://Game assets/MainAssets/Graveyard_TileSet.png" id="1_flniw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3moc7"]
 texture = ExtResource("1_flniw")

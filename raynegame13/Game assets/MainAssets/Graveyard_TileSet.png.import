@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be75huce6t73e"
-path="res://.godot/imported/platform1.png-06fedbbe74365e14f0a16d54499606b7.ctex"
+uid="uid://db2uphtflpbhu"
+path="res://.godot/imported/Graveyard_TileSet.png-ac6934e197181974d1bf23ae1f3f2fa8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HorrorGameAssetPack/MainAssets/platform1.png"
-dest_files=["res://.godot/imported/platform1.png-06fedbbe74365e14f0a16d54499606b7.ctex"]
+source_file="res://Game assets/MainAssets/Graveyard_TileSet.png"
+dest_files=["res://.godot/imported/Graveyard_TileSet.png-ac6934e197181974d1bf23ae1f3f2fa8.ctex"]
 
 [params]
 

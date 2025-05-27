@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db3k4exx54vxs"
-path="res://.godot/imported/4.jpg-41bed7d6eb40a4f6edbc3c8e683ff462.ctex"
+path="res://.godot/imported/4.jpg-080618c748553d7f20abb3ed7a676c67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HorrorGameAssetPack/Backgrounds/4.jpg"
-dest_files=["res://.godot/imported/4.jpg-41bed7d6eb40a4f6edbc3c8e683ff462.ctex"]
+source_file="res://Game assets/Backgrounds/4.jpg"
+dest_files=["res://.godot/imported/4.jpg-080618c748553d7f20abb3ed7a676c67.ctex"]
 
 [params]
 

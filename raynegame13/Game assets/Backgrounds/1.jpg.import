@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csgj8pk2lhfci"
-path="res://.godot/imported/ground.png-cbe4479523699a84f39d67e731048481.ctex"
+uid="uid://d2xueidy2qhoq"
+path="res://.godot/imported/1.jpg-819b0cc606adb0d1de5c3bc4ea287afc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HorrorGameAssetPack/MainAssets/ground.png"
-dest_files=["res://.godot/imported/ground.png-cbe4479523699a84f39d67e731048481.ctex"]
+source_file="res://Game assets/Backgrounds/1.jpg"
+dest_files=["res://.godot/imported/1.jpg-819b0cc606adb0d1de5c3bc4ea287afc.ctex"]
 
 [params]
 
