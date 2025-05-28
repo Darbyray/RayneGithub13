@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://wsdoxmhdkcp4"]
+[gd_scene load_steps=39 format=4 uid="uid://wsdoxmhdkcp4"]
 
 [ext_resource type="TileSet" uid="uid://ctjshqjy56wdo" path="res://Resrouces/Tilesets.tres" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://dpkl6opsmggcm" path="res://PlayerController/PlatformerController2D.gd" id="2_2u3nc"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bc4svhljoshix" path="res://Demo/Resources/PlayerSprites/Run (34x28).png" id="10_wjb0r"]
 [ext_resource type="Texture2D" uid="uid://kw34knvlbb4n" path="res://Demo/Resources/PlayerSprites/Attack (34x28).png" id="11_mc2jv"]
 [ext_resource type="Texture2D" uid="uid://cwy135qylwqmr" path="res://Demo/Resources/PlayerSprites/Fall (34x28).png" id="12_bo7i5"]
-[ext_resource type="Texture2D" uid="uid://i57qe0k34gs" path="res://Demo/Resources/PlayerSprites/Idle (34x28).png" id="13_4h6ng"]
+[ext_resource type="Texture2D" uid="uid://d1lyovo0shy3e" path="res://Game assets/Player sprites/idleRayne1.png" id="13_2u3nc"]
 [ext_resource type="Texture2D" uid="uid://ci8ner3edoii3" path="res://Demo/Resources/PlayerSprites/Jump (34x28).png" id="14_o3ebs"]
 [ext_resource type="Texture2D" uid="uid://cv8hr731yhd08" path="res://Demo/Resources/PlayerSprites/Dead (34x28).png" id="15_k83mh"]
 [ext_resource type="Texture2D" uid="uid://dt0qqbhlvbecb" path="res://Demo/Resources/PlayerSprites/Hit (34x28).png" id="16_qktwf"]
@@ -85,50 +85,6 @@ region = Rect2(111, 6, 21, 19)
 [sub_resource type="AtlasTexture" id="AtlasTexture_aouba"]
 atlas = ExtResource("12_bo7i5")
 region = Rect2(9, 0, 21, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_celug"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(10, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i55fu"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(44, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rayg2"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(78, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l0stj"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(112, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aul8g"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(146, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2xfol"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(180, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdfuk"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(214, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x5nhw"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(248, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmvj5"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(282, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sm4kw"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(316, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tytto"]
-atlas = ExtResource("13_4h6ng")
-region = Rect2(350, 0, 20, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk6vo"]
 atlas = ExtResource("14_o3ebs")
@@ -207,38 +163,8 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.75,
-"texture": SubResource("AtlasTexture_celug")
-}, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i55fu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rayg2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l0stj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aul8g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2xfol")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdfuk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x5nhw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nmvj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sm4kw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tytto")
+"texture": ExtResource("13_2u3nc")
 }],
 "loop": true,
 "name": &"idle",
@@ -366,6 +292,7 @@ animationdash = "dash"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlatformerController2D"]
 texture_repeat = 1
+position = Vector2(3, 25)
 sprite_frames = SubResource("SpriteFrames_bh8nc")
 animation = &"idle"
 autoplay = "idle"
