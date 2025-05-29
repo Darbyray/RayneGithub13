@@ -232,7 +232,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjr1n"]
 radius = 9.0
-height = 34.0
+height = 32.0
 
 [node name="world" type="Node2D"]
 
@@ -304,15 +304,14 @@ animationdash = "dash"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlatformerController2D"]
 texture_repeat = 1
-position = Vector2(-1.3411e-06, 4)
+position = Vector2(-1.3411e-06, 5)
 scale = Vector2(0.34375, 0.34375)
 sprite_frames = SubResource("SpriteFrames_bh8nc")
 animation = &"idle"
 autoplay = "idle"
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformerController2D"]
-position = Vector2(0, 3)
+position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_jjr1n")
 
 [node name="left" type="RayCast2D" parent="PlatformerController2D"]
