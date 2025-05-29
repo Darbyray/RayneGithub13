@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://wsdoxmhdkcp4"]
+[gd_scene load_steps=42 format=4 uid="uid://wsdoxmhdkcp4"]
 
 [ext_resource type="TileSet" uid="uid://ctjshqjy56wdo" path="res://Resrouces/Tilesets.tres" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://dpkl6opsmggcm" path="res://PlayerController/PlatformerController2D.gd" id="2_2u3nc"]
@@ -12,10 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://bc4svhljoshix" path="res://Demo/Resources/PlayerSprites/Run (34x28).png" id="10_wjb0r"]
 [ext_resource type="Texture2D" uid="uid://kw34knvlbb4n" path="res://Demo/Resources/PlayerSprites/Attack (34x28).png" id="11_mc2jv"]
 [ext_resource type="Texture2D" uid="uid://cwy135qylwqmr" path="res://Demo/Resources/PlayerSprites/Fall (34x28).png" id="12_bo7i5"]
-[ext_resource type="Texture2D" uid="uid://d1lyovo0shy3e" path="res://Game assets/Player sprites/idleRayne1.png" id="13_2u3nc"]
+[ext_resource type="Texture2D" uid="uid://dijpvb3fu1vky" path="res://Game assets/Player sprites/12 Animated Character Template/idle1.png" id="13_cbp6q"]
+[ext_resource type="Texture2D" uid="uid://bbkdf6qf5govj" path="res://Game assets/Player sprites/12 Animated Character Template/idle2.png" id="14_26xuy"]
 [ext_resource type="Texture2D" uid="uid://ci8ner3edoii3" path="res://Demo/Resources/PlayerSprites/Jump (34x28).png" id="14_o3ebs"]
+[ext_resource type="Texture2D" uid="uid://0go26ksnwdsf" path="res://Game assets/Player sprites/12 Animated Character Template/idle3.png" id="15_bc84e"]
 [ext_resource type="Texture2D" uid="uid://cv8hr731yhd08" path="res://Demo/Resources/PlayerSprites/Dead (34x28).png" id="15_k83mh"]
 [ext_resource type="Texture2D" uid="uid://dt0qqbhlvbecb" path="res://Demo/Resources/PlayerSprites/Hit (34x28).png" id="16_qktwf"]
+[ext_resource type="Texture2D" uid="uid://c5qrmh7athwf0" path="res://Game assets/Player sprites/12 Animated Character Template/idle4.png" id="16_wukud"]
 
 [sub_resource type="Resource" id="Resource_54c8h"]
 script = ExtResource("4_ikiii")
@@ -164,7 +167,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_2u3nc")
+"texture": ExtResource("13_cbp6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_26xuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bc84e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wukud")
 }],
 "loop": true,
 "name": &"idle",
@@ -220,7 +232,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjr1n"]
 radius = 9.0
-height = 18.0
+height = 34.0
 
 [node name="world" type="Node2D"]
 
@@ -292,7 +304,8 @@ animationdash = "dash"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlatformerController2D"]
 texture_repeat = 1
-position = Vector2(3, 25)
+position = Vector2(-1.3411e-06, 4)
+scale = Vector2(0.34375, 0.34375)
 sprite_frames = SubResource("SpriteFrames_bh8nc")
 animation = &"idle"
 autoplay = "idle"
