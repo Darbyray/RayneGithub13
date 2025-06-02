@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8lu4fb64uyyr"
-path="res://.godot/imported/12 Animated Character Template.png-442115e087ec4bb9549c3dcee6ac4757.ctex"
+path="res://.godot/imported/12 Animated Character Template.png-f3a8c5857f816cee1a6ed14207807ee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game assets/Player sprites/12 Animated Character Template/12 Animated Character Template.png"
-dest_files=["res://.godot/imported/12 Animated Character Template.png-442115e087ec4bb9549c3dcee6ac4757.ctex"]
+source_file="res://Game assets/Player sprites/12 Animated Character Template/idle/12 Animated Character Template.png"
+dest_files=["res://.godot/imported/12 Animated Character Template.png-f3a8c5857f816cee1a6ed14207807ee8.ctex"]
 
 [params]
 

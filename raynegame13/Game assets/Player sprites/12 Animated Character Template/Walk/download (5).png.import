@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dijpvb3fu1vky"
-path="res://.godot/imported/idle1.png-a1f6956f6db6113543f3a8125e62e4f6.ctex"
+uid="uid://t70ln8jsjg6l"
+path="res://.godot/imported/download (5).png-8d17a570d4cf871ea8f7a87cd1fa1ddb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game assets/Player sprites/12 Animated Character Template/idle1.png"
-dest_files=["res://.godot/imported/idle1.png-a1f6956f6db6113543f3a8125e62e4f6.ctex"]
+source_file="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (5).png"
+dest_files=["res://.godot/imported/download (5).png-8d17a570d4cf871ea8f7a87cd1fa1ddb.ctex"]
 
 [params]
 
