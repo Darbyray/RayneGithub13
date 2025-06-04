@@ -328,6 +328,7 @@ texture_filter = 1
 [node name="Polygon2D" type="Polygon2D" parent="."]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_w425c")
+position = Vector2(35, -9)
 color = Color(0.51, 1, 1, 1)
 texture = SubResource("NoiseTexture2D_phofa")
 polygon = PackedVector2Array(-34, -75, 989, -72, 992, 632, -46, 632)
