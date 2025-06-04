@@ -39,7 +39,7 @@ class_name PlatformerController2D
 ##How many jumps your character can do before needing to touch the ground again. Giving more than 1 jump disables jump buffering and coyote time.
 @export_range(0, 4, 1) var jumps: int = 1
 ##The strength at which your character will be pulled to the ground.
-@export_range(0, 100) var gravityScale: float = 20.0
+@export_range(0, 100) var gravityScale: float = 800.0
 ##The fastest your player can fall
 @export_range(0, 1000) var terminalVelocity: float = 500.0
 ##Your player will move this amount faster when falling providing a less floaty jump curve.

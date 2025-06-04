@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cew7uwqn8h1ii"
-path="res://.godot/imported/download (6).png-71f88538d6de339f8dc8ebbe18e8cd7b.ctex"
+uid="uid://cbqwiok41th83"
+path="res://.godot/imported/download (3).png-18be9393ceb05b791bb1e57902b01328.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game assets/Player sprites/12 Animated Character Template/fall/download (6).png"
-dest_files=["res://.godot/imported/download (6).png-71f88538d6de339f8dc8ebbe18e8cd7b.ctex"]
+source_file="res://Game assets/Player sprites/12 Animated Character Template/jump/download (3).png"
+dest_files=["res://.godot/imported/download (3).png-18be9393ceb05b791bb1e57902b01328.ctex"]
 
 [params]
 

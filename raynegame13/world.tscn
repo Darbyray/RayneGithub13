@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://wsdoxmhdkcp4"]
+[gd_scene load_steps=45 format=4 uid="uid://wsdoxmhdkcp4"]
 
 [ext_resource type="TileSet" uid="uid://ctjshqjy56wdo" path="res://Resrouces/Tilesets.tres" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://dpkl6opsmggcm" path="res://PlayerController/PlatformerController2D.gd" id="2_2u3nc"]
@@ -11,25 +11,25 @@
 [ext_resource type="Texture2D" uid="uid://bv4kcc210h5cn" path="res://Demo/Resources/PlayerSprites/Ground (34x28).png" id="9_il2jm"]
 [ext_resource type="Texture2D" uid="uid://bc4svhljoshix" path="res://Demo/Resources/PlayerSprites/Run (34x28).png" id="10_wjb0r"]
 [ext_resource type="Texture2D" uid="uid://kw34knvlbb4n" path="res://Demo/Resources/PlayerSprites/Attack (34x28).png" id="11_mc2jv"]
-[ext_resource type="Texture2D" uid="uid://cwy135qylwqmr" path="res://Demo/Resources/PlayerSprites/Fall (34x28).png" id="12_bo7i5"]
 [ext_resource type="Texture2D" uid="uid://dijpvb3fu1vky" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle1.png" id="13_cbp6q"]
 [ext_resource type="Texture2D" uid="uid://bbkdf6qf5govj" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle2.png" id="14_26xuy"]
 [ext_resource type="Texture2D" uid="uid://0go26ksnwdsf" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle3.png" id="15_bc84e"]
 [ext_resource type="Texture2D" uid="uid://cv8hr731yhd08" path="res://Demo/Resources/PlayerSprites/Dead (34x28).png" id="15_k83mh"]
-[ext_resource type="Texture2D" uid="uid://dt0qqbhlvbecb" path="res://Demo/Resources/PlayerSprites/Hit (34x28).png" id="16_qktwf"]
 [ext_resource type="Texture2D" uid="uid://c5qrmh7athwf0" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle4.png" id="16_wukud"]
-[ext_resource type="Texture2D" uid="uid://bu82t3nimk5gj" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (1).png" id="17_bh8nc"]
-[ext_resource type="Texture2D" uid="uid://bhfpebx4vy4l4" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (2).png" id="18_jjr1n"]
-[ext_resource type="Texture2D" uid="uid://cbqwiok41th83" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (3).png" id="19_gggvi"]
+[ext_resource type="Texture2D" uid="uid://2xlgo84fq24a" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (1).png" id="17_bh8nc"]
+[ext_resource type="Texture2D" uid="uid://bhfpebx4vy4l4" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (2).png" id="18_jjr1n"]
+[ext_resource type="Texture2D" uid="uid://cbqwiok41th83" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (3).png" id="19_gggvi"]
 [ext_resource type="Texture2D" uid="uid://cd2vsmw7i2f8s" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (1).png" id="20_mc2jv"]
-[ext_resource type="Texture2D" uid="uid://bgwnqk2wwh2rq" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (4).png" id="20_w44yn"]
-[ext_resource type="Texture2D" uid="uid://dtadqm6u6a8ga" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (5).png" id="21_6ah6f"]
+[ext_resource type="Texture2D" uid="uid://bgwnqk2wwh2rq" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (4).png" id="20_w44yn"]
+[ext_resource type="Texture2D" uid="uid://dtadqm6u6a8ga" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (5).png" id="21_6ah6f"]
 [ext_resource type="Texture2D" uid="uid://ybu6w4880qjd" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (2).png" id="21_bo7i5"]
 [ext_resource type="Texture2D" uid="uid://c0360tp5sbrvy" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (3).png" id="22_4h6ng"]
-[ext_resource type="Texture2D" uid="uid://cew7uwqn8h1ii" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (6).png" id="22_g1i3r"]
-[ext_resource type="Texture2D" uid="uid://c1wb4836lqoom" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download.png" id="23_my276"]
+[ext_resource type="Texture2D" uid="uid://cew7uwqn8h1ii" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (6).png" id="22_g1i3r"]
+[ext_resource type="Texture2D" uid="uid://bu82t3nimk5gj" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (1).png" id="23_bh8nc"]
+[ext_resource type="Texture2D" uid="uid://c1wb4836lqoom" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download.png" id="23_my276"]
 [ext_resource type="Texture2D" uid="uid://y6qcnhpbmyl1" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (4).png" id="23_o3ebs"]
 [ext_resource type="Texture2D" uid="uid://t70ln8jsjg6l" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (5).png" id="24_k83mh"]
+[ext_resource type="Texture2D" uid="uid://dmhgc1h62twld" path="res://Game assets/Player sprites/12 Animated Character Template/slide/fall1.png" id="25_bh8nc"]
 [ext_resource type="Texture2D" uid="uid://dd4x25r10dat4" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download.png" id="25_qktwf"]
 
 [sub_resource type="Resource" id="Resource_54c8h"]
@@ -97,17 +97,9 @@ region = Rect2(180, 0, 20, 28)
 atlas = ExtResource("11_mc2jv")
 region = Rect2(111, 6, 21, 19)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aouba"]
-atlas = ExtResource("12_bo7i5")
-region = Rect2(9, 0, 21, 28)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_xh6uc"]
 atlas = ExtResource("15_k83mh")
 region = Rect2(47, 0, 20, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3r48q"]
-atlas = ExtResource("16_qktwf")
-region = Rect2(44, 0, 20, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bh8nc"]
 animations = [{
@@ -143,7 +135,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aouba")
+"texture": ExtResource("17_bh8nc")
 }],
 "loop": true,
 "name": &"fall",
@@ -186,7 +178,7 @@ animations = [{
 "texture": ExtResource("18_jjr1n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_bh8nc")
+"texture": ExtResource("23_bh8nc")
 }, {
 "duration": 1.0,
 "texture": ExtResource("19_gggvi")
@@ -205,7 +197,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3r48q")
+"texture": ExtResource("25_bh8nc")
 }],
 "loop": true,
 "name": &"slide",
@@ -236,7 +228,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjr1n"]
-radius = 9.0
+radius = 8.0
 height = 32.0
 
 [node name="world" type="Node2D"]
@@ -281,6 +273,7 @@ maxSpeed = 200.0
 timeToReachMaxSpeed = 0.2
 timeToReachZeroSpeed = 0.2
 jumps = 2
+gravityScale = 20.0
 specialMovements = Array[ExtResource("3_udxuc")]([SubResource("Resource_54c8h"), SubResource("Resource_nuypq"), SubResource("Resource_nse7k"), SubResource("Resource_6l8yr"), SubResource("Resource_bqjno")])
 inputleft = "move_left"
 inputright = "move_right"
@@ -312,7 +305,7 @@ texture_repeat = 1
 position = Vector2(-1.3411e-06, 5)
 scale = Vector2(0.34375, 0.34375)
 sprite_frames = SubResource("SpriteFrames_bh8nc")
-animation = &"jump"
+animation = &"slide"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformerController2D"]
