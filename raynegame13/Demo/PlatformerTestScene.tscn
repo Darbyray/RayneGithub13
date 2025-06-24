@@ -373,6 +373,7 @@ maxSpeed = 200.0
 timeToReachMaxSpeed = 0.2
 timeToReachZeroSpeed = 0.2
 gravityScale = 20.0
+descendingGravityFactor = 1.3
 specialMovements = Array[ExtResource("2_aks1j")]([SubResource("Resource_54c8h"), SubResource("Resource_nuypq"), SubResource("Resource_nse7k"), SubResource("Resource_6l8yr"), SubResource("Resource_bqjno")])
 inputleft = "move_left"
 inputright = "move_right"

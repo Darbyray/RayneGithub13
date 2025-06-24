@@ -43,7 +43,7 @@ class_name PlatformerController2D
 ##The fastest your player can fall
 @export_range(0, 1000) var terminalVelocity: float = 500.0
 ##Your player will move this amount faster when falling providing a less floaty jump curve.
-@export_range(0.5, 3, 0.1) var descendingGravityFactor: float = 1.3
+@export_range(0.5, 3, 0.1) var descendingGravityFactor: float = 1.5
 ##If this variable is under 1 and the player releases the jump key while still ascending, their vertical velocity will multiplied by this value, providing variable jump height.
 @export_range(0, 1, 0.1) var shortHopMultiplier: float = 0.5
 ##How much extra time (in seconds) your player will be given to jump after falling off an edge. This is set to 0.2 seconds by default.
