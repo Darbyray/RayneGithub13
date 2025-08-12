@@ -339,5 +339,6 @@ position_smoothing_enabled = true
 
 [node name="BG music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("33_dela8")
-volume_db = 2.735
+volume_db = 2.3
 autoplay = true
+parameters/looping = true
