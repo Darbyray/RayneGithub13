@@ -39,10 +39,11 @@ modulate = Color(0.709804, 0.184314, 0.188235, 1)
 layout_mode = 2
 text = "Begin"
 
-[node name="Leave" type="Button" parent="VBoxContainer"]
-modulate = Color(0.709804, 0.184314, 0.188235, 1)
+[node name="Notes(placeholder" type="Button" parent="VBoxContainer"]
+modulate = Color(0.708255, 0.185097, 0.188901, 1)
 layout_mode = 2
-text = "Leave"
+text = "Notes(placeholder)
+"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 modulate = Color(0.709804, 0.184314, 0.188235, 1)
@@ -50,8 +51,7 @@ layout_mode = 2
 text = "Credits
 "
 
-[node name="Notes(placeholder" type="Button" parent="VBoxContainer"]
-modulate = Color(0.708255, 0.185097, 0.188901, 1)
+[node name="Leave" type="Button" parent="VBoxContainer"]
+modulate = Color(0.709804, 0.184314, 0.188235, 1)
 layout_mode = 2
-text = "Notes(placeholder)
-"
+text = "Leave"
