@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs8ruld4x3dc7"]
-
-[ext_resource type="AudioStream" uid="uid://bfbpybq1xlxln" path="res://Game assets/Music/1 Hour of Dark and Mysterious Ambient Music for writing and creativity  Dnd _ RPG Ambience - Arondight Studios.mp3" id="1_fbmny"]
-
-[node name="Music" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_fbmny")
-autoplay = true
-bus = &"Music"

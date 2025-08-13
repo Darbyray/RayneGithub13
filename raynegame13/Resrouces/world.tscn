@@ -233,8 +233,7 @@ animations = [{
 radius = 8.0
 height = 32.0
 
-[node name="world" type="Node2D"]
-position = Vector2(1466, 1078)
+[node name="World" type="Node2D"]
 
 [node name="Bakground" type="Sprite2D" parent="."]
 position = Vector2(596.875, 228.875)
@@ -340,5 +339,6 @@ position_smoothing_enabled = true
 [node name="BG music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("33_dela8")
 volume_db = 2.3
+pitch_scale = 0.95
 autoplay = true
 parameters/looping = true
