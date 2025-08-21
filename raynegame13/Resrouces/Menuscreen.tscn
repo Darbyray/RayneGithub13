@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://kihc0s552arv"]
+[gd_scene load_steps=5 format=3 uid="uid://kihc0s552arv"]
 
 [ext_resource type="Texture2D" uid="uid://cgox86hua06vd" path="res://Game assets/Backgrounds/bakground.png" id="1_kpt3j"]
+[ext_resource type="Script" uid="uid://b7hmeriktnngq" path="res://scripts/v_box_container.gd" id="4_rpywp"]
 [ext_resource type="Texture2D" uid="uid://c4v4m0ve1c0af" path="res://Game assets/Backgrounds/mainmenu(2).jpg" id="4_xwdea"]
 [ext_resource type="AudioStream" uid="uid://cub0bovuvdja8" path="res://backgroundmusic/1 Hour of Dark and Mysterious Ambient Music for writing and creativity  Dnd _ RPG Ambience - Arondight Studios (mp3cut.net).mp3" id="33_vnbxi"]
 
@@ -33,25 +34,33 @@ offset_left = 574.0
 offset_top = 297.0
 offset_right = 777.0
 offset_bottom = 507.0
+script = ExtResource("4_rpywp")
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 modulate = Color(0.709804, 0.184314, 0.188235, 1)
 layout_mode = 2
+theme_override_font_sizes/font_size = 0
 text = "Begin"
 
 [node name="Notes(placeholder" type="Button" parent="VBoxContainer"]
 modulate = Color(0.708255, 0.185097, 0.188901, 1)
 layout_mode = 2
+theme_override_font_sizes/font_size = 0
 text = "Notes(placeholder)
 "
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 modulate = Color(0.709804, 0.184314, 0.188235, 1)
 layout_mode = 2
+theme_override_font_sizes/font_size = 0
 text = "Credits
 "
 
 [node name="Leave" type="Button" parent="VBoxContainer"]
 modulate = Color(0.709804, 0.184314, 0.188235, 1)
 layout_mode = 2
+theme_override_font_sizes/font_size = 0
 text = "Leave"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="VBoxContainer" method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Leave" to="VBoxContainer" method="_on_leave_pressed"]
