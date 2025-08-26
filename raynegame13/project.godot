@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RayneGame13"
-run/main_scene="uid://wsdoxmhdkcp4"
+run/main_scene="uid://kihc0s552arv"
 config/features=PackedStringArray("4.4")
 
 [audio]

@@ -1,0 +1,333 @@
+[gd_scene load_steps=44 format=3 uid="uid://duvm7jseqq8ma"]
+
+[ext_resource type="Script" uid="uid://dpkl6opsmggcm" path="res://PlayerController/PlatformerController2D.gd" id="1_35l3m"]
+[ext_resource type="Script" uid="uid://cbynl41wxpuef" path="res://PlayerController/SpecialMovementsPlatformer2D.gd" id="2_qnxmf"]
+[ext_resource type="Script" uid="uid://crw52n7orbto4" path="res://PlayerController/SpecialMovements/CrouchAndRoll.gd" id="3_b4x6j"]
+[ext_resource type="Script" uid="uid://w31xs6cqevbh" path="res://PlayerController/SpecialMovements/WallJump.gd" id="4_v4lnv"]
+[ext_resource type="Script" uid="uid://b024cddjhaioy" path="res://PlayerController/SpecialMovements/GroundPound.gd" id="5_kkivj"]
+[ext_resource type="Script" uid="uid://crjmg60dwp70g" path="res://PlayerController/SpecialMovements/CornerCutting.gd" id="6_k0t4g"]
+[ext_resource type="Script" uid="uid://b8tn8p0kt8flg" path="res://PlayerController/SpecialMovements/Dash.gd" id="7_sj15q"]
+[ext_resource type="Texture2D" uid="uid://bv4kcc210h5cn" path="res://Demo/Resources/PlayerSprites/Ground (34x28).png" id="8_2285b"]
+[ext_resource type="Texture2D" uid="uid://bc4svhljoshix" path="res://Demo/Resources/PlayerSprites/Run (34x28).png" id="9_x2apc"]
+[ext_resource type="Texture2D" uid="uid://kw34knvlbb4n" path="res://Demo/Resources/PlayerSprites/Attack (34x28).png" id="10_04w8x"]
+[ext_resource type="Texture2D" uid="uid://2xlgo84fq24a" path="res://Game assets/Player sprites/12 Animated Character Template/fall/download (1).png" id="11_bbvds"]
+[ext_resource type="Texture2D" uid="uid://dijpvb3fu1vky" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle1.png" id="12_ww3an"]
+[ext_resource type="Texture2D" uid="uid://bbkdf6qf5govj" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle2.png" id="13_2sn5i"]
+[ext_resource type="Texture2D" uid="uid://0go26ksnwdsf" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle3.png" id="14_w13bi"]
+[ext_resource type="Texture2D" uid="uid://c5qrmh7athwf0" path="res://Game assets/Player sprites/12 Animated Character Template/idle/idle4.png" id="15_jgmd6"]
+[ext_resource type="Texture2D" uid="uid://cbqwiok41th83" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (3).png" id="16_i14hk"]
+[ext_resource type="Texture2D" uid="uid://bgwnqk2wwh2rq" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (4).png" id="17_fqw06"]
+[ext_resource type="Texture2D" uid="uid://dtadqm6u6a8ga" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (5).png" id="18_3uw2u"]
+[ext_resource type="Texture2D" uid="uid://cew7uwqn8h1ii" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (6).png" id="19_a4we3"]
+[ext_resource type="Texture2D" uid="uid://c1wb4836lqoom" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download.png" id="20_8iuvh"]
+[ext_resource type="Texture2D" uid="uid://bhfpebx4vy4l4" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (2).png" id="21_jj462"]
+[ext_resource type="Texture2D" uid="uid://bu82t3nimk5gj" path="res://Game assets/Player sprites/12 Animated Character Template/jump/download (1).png" id="22_jylk7"]
+[ext_resource type="Texture2D" uid="uid://cv8hr731yhd08" path="res://Demo/Resources/PlayerSprites/Dead (34x28).png" id="23_4i6ko"]
+[ext_resource type="Texture2D" uid="uid://dmhgc1h62twld" path="res://Game assets/Player sprites/12 Animated Character Template/slide/fall1.png" id="24_55o5i"]
+[ext_resource type="Texture2D" uid="uid://cd2vsmw7i2f8s" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (1).png" id="25_1lpm5"]
+[ext_resource type="Texture2D" uid="uid://ybu6w4880qjd" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (2).png" id="26_yvw0w"]
+[ext_resource type="Texture2D" uid="uid://c0360tp5sbrvy" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (3).png" id="27_w4i30"]
+[ext_resource type="Texture2D" uid="uid://y6qcnhpbmyl1" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (4).png" id="28_tq24a"]
+[ext_resource type="Texture2D" uid="uid://t70ln8jsjg6l" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (5).png" id="29_66kna"]
+[ext_resource type="Texture2D" uid="uid://dd4x25r10dat4" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download.png" id="30_hngpl"]
+
+[sub_resource type="Resource" id="Resource_54c8h"]
+script = ExtResource("3_b4x6j")
+crouchSpeedMultiplier = 0.5
+crouchSizeMultiplier = 0.5
+canRoll = true
+rollTime = 0.2
+rollSpeedMultiplier = 1.2
+
+[sub_resource type="Resource" id="Resource_nuypq"]
+script = ExtResource("4_v4lnv")
+inputPauseAfterWallJump = 0.1
+coyoteTime = 0.1
+wallKickAngle = 60.0
+wallSliding = 3.0
+wallLatching = 2
+
+[sub_resource type="Resource" id="Resource_nse7k"]
+script = ExtResource("5_kkivj")
+pause = 0.25
+maxVelocityMultiplier = 10.0
+fallMultiplier = 2.0
+holdDown = false
+upToCancel = true
+freezeHorizontally = true
+
+[sub_resource type="Resource" id="Resource_6l8yr"]
+script = ExtResource("6_k0t4g")
+correctionAmount = 1.5
+leftRaycast = NodePath("left")
+middleRaycast = NodePath("middle")
+rightRaycast = NodePath("right")
+
+[sub_resource type="Resource" id="Resource_bqjno"]
+script = ExtResource("7_sj15q")
+dashType = 0
+airDash = false
+dashes = 1
+dashCancel = 1
+speedMultiplier = 1.75
+duration = 0.25
+noDirectionDash = true
+allowJump = true
+consecutiveJumps = 1
+consecutiveJumpsTimer = 0.15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7h7y"]
+atlas = ExtResource("8_2285b")
+region = Rect2(9, 0, 21, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8k3e"]
+atlas = ExtResource("8_2285b")
+region = Rect2(9, 0, 21, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sco0"]
+atlas = ExtResource("9_x2apc")
+region = Rect2(78, 0, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvm42"]
+atlas = ExtResource("9_x2apc")
+region = Rect2(180, 0, 20, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2dc5"]
+atlas = ExtResource("10_04w8x")
+region = Rect2(111, 6, 21, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh6uc"]
+atlas = ExtResource("23_4i6ko")
+region = Rect2(47, 0, 20, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsewk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7h7y")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_a8k3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sco0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvm42")
+}],
+"loop": true,
+"name": &"crouchWalk",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2dc5")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bbvds")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ww3an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2sn5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_w13bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jgmd6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_i14hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fqw06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3uw2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_a4we3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8iuvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jj462")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jylk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i14hk")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh6uc")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_55o5i")
+}],
+"loop": true,
+"name": &"slide",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_1lpm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yvw0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_w4i30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_tq24a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_66kna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_hngpl")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1xig"]
+radius = 8.0
+height = 32.0
+
+[node name="world" type="Node2D"]
+
+[node name="PlatformerController2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("playerSprite", "playerCollider")]
+position = Vector2(-1086, -1027)
+script = ExtResource("1_35l3m")
+playerSprite = NodePath("AnimatedSprite2D")
+playerCollider = NodePath("CollisionShape2D")
+inputKeys = {
+"crouch": "ui_down",
+"dash": "Button_2",
+"down": "move_down",
+"groundPound": "Button_3",
+"jump": "Button_1",
+"latch": "Button_3",
+"left": "move_left",
+"right": "move_right",
+"roll": "Button_2",
+"run": "Button_2",
+"up": "move_up"
+}
+animations = {
+"crouch_idle": "crouch",
+"crouch_walk": "crouchWalk",
+"dash": "dash",
+"falling": "fall",
+"groundPound": "crouch",
+"idle": "idle",
+"jump": "jump",
+"latch": "slide",
+"roll": "roll",
+"run": "walk",
+"slide": "slide",
+"walk": "walk"
+}
+maxSpeed = 150.0
+timeToReachMaxSpeed = 0.2
+timeToReachZeroSpeed = 0.2
+gravityScale = 20.0
+descendingGravityFactor = 1.3
+specialMovements = Array[ExtResource("2_qnxmf")]([SubResource("Resource_54c8h"), SubResource("Resource_nuypq"), SubResource("Resource_nse7k"), SubResource("Resource_6l8yr"), SubResource("Resource_bqjno")])
+inputleft = "move_left"
+inputright = "move_right"
+inputup = "move_up"
+inputdown = "move_down"
+inputjump = "Button_1"
+inputrun = "Button_2"
+inputcrouch = "ui_down"
+inputroll = "Button_2"
+inputlatch = "Button_3"
+inputgroundPound = "Button_3"
+inputdash = "Button_2"
+animationCustomFlip = false
+animationidle = "idle"
+animationwalk = "walk"
+animationjump = "jump"
+animationrun = "walk"
+animationfalling = "fall"
+animationcrouch_idle = "crouch"
+animationcrouch_walk = "crouchWalk"
+animationroll = "roll"
+animationslide = "slide"
+animationlatch = "slide"
+animationgroundPound = "crouch"
+animationdash = "dash"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlatformerController2D"]
+texture_repeat = 1
+position = Vector2(-1.3411e-06, 5)
+scale = Vector2(0.34375, 0.34375)
+sprite_frames = SubResource("SpriteFrames_dsewk")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformerController2D"]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_d1xig")
+
+[node name="left" type="RayCast2D" parent="PlatformerController2D"]
+position = Vector2(-8, -1)
+target_position = Vector2(0, -20)
+
+[node name="middle" type="RayCast2D" parent="PlatformerController2D"]
+position = Vector2(0, -1)
+target_position = Vector2(0, -20)
+
+[node name="right" type="RayCast2D" parent="PlatformerController2D"]
+position = Vector2(8, -1)
+target_position = Vector2(0, -20)
+
+[node name="Camera2D" type="Camera2D" parent="PlatformerController2D"]
+zoom = Vector2(3, 3)
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="ladder_detect_ray" type="RayCast2D" parent="PlatformerController2D"]
+position = Vector2(-1.75, 0)
+target_position = Vector2(0, 5.5)
+collision_mask = 16
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
