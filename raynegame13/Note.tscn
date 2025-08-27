@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=3 uid="uid://dhv2w8u8prgjo"]
+
+[ext_resource type="Texture2D" uid="uid://tgib5qoge7i5" path="res://Game assets/collectables/note/New Piskel (1).png" id="1_m01oh"]
+[ext_resource type="Script" uid="uid://cl6ff332t6u0o" path="res://note.gd" id="1_pmjlu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmjlu"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6st8q"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewwnu"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71nm0"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alvmo"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7hkh"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cubg4"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdvoa"]
+atlas = ExtResource("1_m01oh")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kiwbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmjlu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6st8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewwnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71nm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alvmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7hkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cubg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdvoa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6st8q"]
+size = Vector2(21, 30)
+
+[node name="Note" type="Node2D"]
+script = ExtResource("1_pmjlu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kiwbk")
+frame_progress = 0.759831
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_6st8q")
+debug_color = Color(0.82691, 0.266995, 0.735018, 0.42)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -11.5
+offset_right = 5.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

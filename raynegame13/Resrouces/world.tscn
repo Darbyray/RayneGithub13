@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://wsdoxmhdkcp4"]
+[gd_scene load_steps=48 format=4 uid="uid://wsdoxmhdkcp4"]
 
 [ext_resource type="Texture2D" uid="uid://cgox86hua06vd" path="res://Game assets/Backgrounds/bakground.png" id="1_dela8"]
 [ext_resource type="TileSet" uid="uid://ctjshqjy56wdo" path="res://Resrouces/Tilesets.tres" id="2_7vlub"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://t70ln8jsjg6l" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download (5).png" id="31_gemrm"]
 [ext_resource type="Texture2D" uid="uid://dd4x25r10dat4" path="res://Game assets/Player sprites/12 Animated Character Template/Walk/download.png" id="32_gs3uu"]
 [ext_resource type="AudioStream" uid="uid://cub0bovuvdja8" path="res://backgroundmusic/1 Hour of Dark and Mysterious Ambient Music for writing and creativity  Dnd _ RPG Ambience - Arondight Studios (mp3cut.net).mp3" id="33_dela8"]
+[ext_resource type="PackedScene" uid="uid://dhv2w8u8prgjo" path="res://Note.tscn" id="34_7vlub"]
 
 [sub_resource type="Resource" id="Resource_54c8h"]
 script = ExtResource("5_gnfnx")
@@ -253,6 +254,8 @@ parameters/looping = true
 
 [node name="PlatformerController2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("playerSprite", "playerCollider")]
 position = Vector2(-1086, -1027)
+collision_layer = 18
+collision_mask = 19
 script = ExtResource("3_fgbqx")
 playerSprite = NodePath("AnimatedSprite2D")
 playerCollider = NodePath("CollisionShape2D")
@@ -343,10 +346,7 @@ zoom = Vector2(3, 3)
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="ladder_detect_ray" type="RayCast2D" parent="PlatformerController2D"]
-position = Vector2(-1.75, 0)
-target_position = Vector2(0, 5.5)
-collision_mask = 16
-hit_from_inside = true
-collide_with_areas = true
-collide_with_bodies = false
+[node name="collectables" type="Node2D" parent="."]
+
+[node name="Note" parent="collectables" instance=ExtResource("34_7vlub")]
+position = Vector2(-1032, -1015)
