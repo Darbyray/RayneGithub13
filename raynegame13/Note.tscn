@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://tgib5qoge7i5" path="res://Game assets/collectables/note/New Piskel (1).png" id="1_m01oh"]
 [ext_resource type="Script" uid="uid://cl6ff332t6u0o" path="res://note.gd" id="1_pmjlu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6st8q"]
+size = Vector2(21, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmjlu"]
 atlas = ExtResource("1_m01oh")
 region = Rect2(0, 0, 32, 32)
@@ -67,24 +70,19 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6st8q"]
-size = Vector2(21, 30)
-
-[node name="Note" type="Node2D"]
-script = ExtResource("1_pmjlu")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_kiwbk")
-frame_progress = 0.759831
-
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+[node name="Note" type="Area2D"]
 collision_layer = 16
 collision_mask = 16
+script = ExtResource("1_pmjlu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 0)
 shape = SubResource("RectangleShape2D_6st8q")
 debug_color = Color(0.82691, 0.266995, 0.735018, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kiwbk")
+frame_progress = 0.558345
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -101,4 +99,4 @@ grow_vertical = 2
 text = "1"
 horizontal_alignment = 1
 
-[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
